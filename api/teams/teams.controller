@@ -1,0 +1,64 @@
+var _ = require('lodash')
+var datastore = require('../datastore');
+
+// Get list of customers
+exports.index = function(req, res) {
+    return res.json(200, datastore.teams);
+} ;
+ 
+// Get a single customer
+exports.show = function(req, res) {
+    var index = _.findIndex(datastore.teams , 
+           function(team) {
+              return team.id == req.params.id;
+        });      
+     if (index != -1) {
+        return res.json(datastore.teams[index] );
+      }
+      else
+        {
+         return res.send(404)
+       }
+
+};
+
+// Creates a new customer in datastore.
+exports.create = function(req, res) {
+    var nextId = 0
+    var last = _.last(datastore.teams)
+    if (last != undefined) {
+       nextId = last.id + 1
+    } else {
+      nextId = 1
+    }
+    var team = {
+       id: nextId,
+       name: req.body.name,
+	   logo: req.body.logo,
+	   Nickname: req.body.Nickname,
+	   Founded: req.body.Founded,
+	   Stadium: req.body.Stadium,
+	   Capacity: req.body.Capacity,
+	   Manager: req.body.Manager,
+	   latestNews: req.body.latestNews,
+	   stats: req.body.stats,
+	   Description: req.body.Description,
+    };
+    datastore.teams.push(team)
+    return res.json(201, team);
+};
+
+// Deletes a customer from datastore.
+exports.destroy = function(req, res) {
+    var elements = _.remove(datastore.teams , 
+           function(team) {
+              return team.id == req.params.id;
+        });  
+     if (elements.length == 1) {
+        return res.send(200);
+        }
+      else
+        {
+         return res.send(404)
+      }
+};
