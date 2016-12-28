@@ -62,3 +62,18 @@ exports.destroy = function(req, res) {
          return res.send(404)
       }
 };
+
+// Update an existing contact in datastore.
+exports.update = function(req, res) {
+      var index = _.findIndex(datastore.teams, function(team) {
+           return team.id == req.params.id;
+        } );      
+      if (index !== -1) {
+          datastore.teams.splice(index, 1, 
+               {id: req.body.id, name: req.body.name, logo: req.body.logo , 
+                         Nickname: req.body.Nickname , Founded: req.body.Founded, Stadium: req.body.Stadium, Capacity: req.body.Capacity,
+						Manager: req.body.Manager, latestNews: req.body.latestNews, stats: req.body.stats, Description: req.body.Description});
+          return res.send(200);
+        } 
+      return res.send(404) ;
+};
