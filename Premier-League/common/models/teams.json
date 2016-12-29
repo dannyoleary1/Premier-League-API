@@ -1,0 +1,54 @@
+{
+  "name": "teams",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "string",
+      "required": true
+    },
+    "Nickname": {
+      "type": "string",
+      "required": true
+    },
+    "Founded": {
+      "type": "number",
+      "required": true
+    },
+    "Stadium": {
+      "type": "string",
+      "required": true
+    },
+    "Capacity": {
+      "type": "number",
+      "required": true
+    },
+    "Manager": {
+      "type": "string",
+      "required": true
+    },
+    "latestNews": {
+      "type": "string",
+      "required": true
+    },
+    "stats": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
