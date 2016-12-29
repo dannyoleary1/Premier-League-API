@@ -1,0 +1,41 @@
+{
+  "name": "table",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "TEAM": {
+      "type": "string"
+    },
+    "GP": {
+      "type": "number"
+    },
+    "W": {
+      "type": "number"
+    },
+    "D": {
+      "type": "number"
+    },
+    "L": {
+      "type": "number"
+    },
+    "GF": {
+      "type": "number"
+    },
+    "GA": {
+      "type": "number"
+    },
+    "GD": {
+      "type": "number"
+    },
+    "PTS": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

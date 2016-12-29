@@ -1,0 +1,35 @@
+{
+  "name": "fixtures",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "HOMETEAM": {
+      "type": "string"
+    },
+    "HOMEPREVRES": {
+      "type": "string"
+    },
+    "AWAYTEAM": {
+      "type": "string"
+    },
+    "AWAYPREVRES": {
+      "type": "string"
+    },
+    "DATE": {
+      "type": "string"
+    },
+    "TIME": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

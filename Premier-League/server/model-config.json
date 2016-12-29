@@ -35,5 +35,13 @@
   "teams": {
     "dataSource": "mysqlDs",
     "public": true
+  },
+  "table": {
+    "dataSource": "mysqlDs",
+    "public": true
+  },
+  "fixtures": {
+    "dataSource": "mysqlDs",
+    "public": true
   }
 }
