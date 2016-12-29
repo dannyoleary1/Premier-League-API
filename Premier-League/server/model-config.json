@@ -33,7 +33,7 @@
     "public": false
   },
   "teams": {
-    "dataSource": "db",
+    "dataSource": "mysqlDs",
     "public": true
   }
 }

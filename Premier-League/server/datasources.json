@@ -2,5 +2,15 @@
   "db": {
     "name": "db",
     "connector": "memory"
+  },
+  "mysqlDs": {
+    "host": "sql8.freesqldatabase.com",
+    "port": 3306,
+    "url": "",
+    "database": "sql8151463",
+    "password": "3G9knSAsn6",
+    "name": "mysqlDs",
+    "user": "sql8151463",
+    "connector": "mysql"
   }
 }

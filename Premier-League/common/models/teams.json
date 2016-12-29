@@ -6,45 +6,38 @@
     "validateUpsert": true
   },
   "properties": {
+    "id": {
+      "type": "string"
+    },
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "logo": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "Nickname": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "Founded": {
-      "type": "number",
-      "required": true
+      "type": "number"
     },
     "Stadium": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "Capacity": {
-      "type": "number",
-      "required": true
+      "type": "number"
     },
     "Manager": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "latestNews": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "stats": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "Description": {
-      "type": "string",
-      "required": true
+      "type": "string"
     }
   },
   "validations": [],
